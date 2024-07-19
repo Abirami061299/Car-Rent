@@ -1,0 +1,27 @@
+<template>
+    
+    <lightning-layout 
+      horizontal-align="center"
+       
+      pull-to-boundary="small"
+      vertical-align="start"
+    >
+      <lightning-layout-item padding="horizontal-small">
+        <lightning-combobox
+        name="carType"
+        label="Search Your Car"
+        value={selectedCarType}
+        placeholder="All Types"
+        options={carTypes}
+        onchange={handleCarTypeChange}
+        variant="label-hidden" ></lightning-combobox>
+
+      </lightning-layout-item>
+      <lightning-layout-item padding="horizontal-small">
+        <lightning-button 
+          label="New" 
+          onclick={createNewCarType} 
+        ></lightning-button>
+      </lightning-layout-item>
+    </lightning-layout>
+</template>
